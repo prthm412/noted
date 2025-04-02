@@ -1,0 +1,11 @@
+server/
+├── config/           ← DB connection
+│   └── db.js
+├── models/           ← Sequelize models
+├── routes/           ← API routes
+├── controllers/      ← Logic for each route
+├── middleware/       ← Auth, error handling
+├── utils/            ← Any helper functions
+├── app.js            ← Main express app
+├── .env              ← Environment variables
+└── package.json
