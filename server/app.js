@@ -4,17 +4,22 @@ import dotenv from "dotenv";
 import sequelize from "./config/db.js";
 import User from "./models/User.js";
 import userRoutes from "./routes/userRoutes.js";
+import Subject from "./models/Subject.js";
+import subjectRoutes from "./routes/subjectRoutes.js";
 
 
 dotenv.config();
 
 const app = express();
 
+
 app.use(cors());
 app.use(express.json());
 
 // Routes
 app.use("/api/users", userRoutes);
+
+app.use("/api/subjects", subjectRoutes);
 
 // Health check route
 app.get("/", (req, res) => {
