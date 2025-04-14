@@ -6,6 +6,7 @@ import User from "./models/User.js";
 import userRoutes from "./routes/userRoutes.js";
 import Subject from "./models/Subject.js";
 import subjectRoutes from "./routes/subjectRoutes.js";
+import Task from "./models/Task.js";
 
 
 dotenv.config();
