@@ -19,3 +19,15 @@ export const createSubject = async (req, res) => {
         res.status(500).json({ message: "Failed to create subject", error: err.message });
     }
 };
+
+export const getSubjects = async (req, res) => {
+    try {
+        const subjects = await Subject.findAll({
+            where: { userId: req.user.id },
+        });
+
+        res.status(200).json(subjects);
+    } catch (err) {
+        res.status(500).json({ message: "Failed to fetch subjects", error: err.message });
+    }
+};
