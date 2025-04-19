@@ -7,6 +7,8 @@ import userRoutes from "./routes/userRoutes.js";
 import Subject from "./models/Subject.js";
 import subjectRoutes from "./routes/subjectRoutes.js";
 import Task from "./models/Task.js";
+import taskRoutes from "./routes/taskRoutes.js";
+import Note from "./models/Note.js";
 
 
 dotenv.config();
@@ -21,6 +23,8 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 
 app.use("/api/subjects", subjectRoutes);
+
+app.use("/api/tasks", taskRoutes);
 
 // Health check route
 app.get("/", (req, res) => {
