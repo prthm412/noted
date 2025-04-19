@@ -9,6 +9,7 @@ import subjectRoutes from "./routes/subjectRoutes.js";
 import Task from "./models/Task.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import Note from "./models/Note.js";
+import noteRoutes from "./routes/noteRoutes.js";
 
 
 dotenv.config();
@@ -25,6 +26,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/subjects", subjectRoutes);
 
 app.use("/api/tasks", taskRoutes);
+
+app.use("/api/notes", noteRoutes);
 
 // Health check route
 app.get("/", (req, res) => {
